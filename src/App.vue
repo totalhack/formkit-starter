@@ -2,18 +2,7 @@
   <div class="container">
     <div class="sample-input">
       <h1>FormKit Starter Project</h1>
-      <FormKit
-        type="group"
-        v-model="formData"
-      >
-        <FormKit
-          name="hello_world"
-          label="Hello World"
-          placeholder="Enter something here..."
-          validation="required"
-          validation-behavior="live"
-          help="Read the docs for more info on using FormKit"
-        />
+      <FormKit type="group" v-model="formData">
         <FormKit
           name="opinion"
           label="Opinion"
@@ -22,18 +11,6 @@
           value="A lot"
           :options="['A little', 'A lot']"
         />
-        <div class="side-by-side">
-          <FormKit
-            name="recommendation"
-            label="Recommendation"
-            v-model="recommendation"
-            help="How likely are you to recommend FormKit to a friend?"
-            type="range"
-            min="0"
-            max="10"
-          />
-          <pre class="range-output">{{ recommendation }} </pre>
-        </div>
       </FormKit>
 
       <h2>Modeled group values</h2>
